@@ -99,6 +99,18 @@ const displayNewsDetails = ids => {
     })
 }
 
+// spinner
+const toggleSpinner = isLoading => {
+    const loaderSection = document.getElementById('spinjner');
+    if (isLoading === true) {
+        loaderSection.classList.remove('d-none');
+    }
+    else {
+        loaderSection.classList.add('d-none');
+    }
+};
+
+
 
 
 loadNewsCategory();
