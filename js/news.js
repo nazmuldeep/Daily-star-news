@@ -111,6 +111,17 @@ const toggleSpinner = isLoading => {
 };
 
 
-
+// loading for modal of news details
+const detailsModal = async (newsId) => {
+    const url = `https://openapi.programming-hero.com/api/news/${newsId}`
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        displayDetailsModal(data.data)
+    }
+    catch (error) {
+        alert('Error Occured');
+    }
+}
 
 loadNewsCategory();
