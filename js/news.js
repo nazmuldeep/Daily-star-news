@@ -145,5 +145,8 @@ const displayDetailsModal = id => {
 };
 
 
-
+// navbar news eventhandler
+document.getElementById('news-nav').addEventListener('click', function () {
+    loadNewsDetails('08');
+});
 loadNewsCategory();
